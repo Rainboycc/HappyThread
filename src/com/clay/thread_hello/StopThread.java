@@ -5,11 +5,11 @@ public class StopThread extends Thread {
     public void run() {
         super.run();
         try {
-            for (int i = 0; i < 10000; i++) {
+            for (int i = 0; i < 10000000; i++) {
                 if (this.isInterrupted()) {
                     throw new InterruptedException();
                 }
-                Thread.sleep(1000);
+//                Thread.sleep(1000);
                 System.out.println(i);
             }
         } catch (InterruptedException e) {
